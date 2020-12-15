@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20201210 09:14:30.167" rpa="false">
+<suite id="s1" name="Test" source="C:\Akaue\robotFramework\test.robot">
+<test id="s1-t1" name="Deve retornar mensagem de boas vindas">
+<kw name="Welcome" library="app">
+<arguments>
+<arg>Akau</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20201210 09:14:30.207" level="INFO">${result} = Ola Akau, Bem vindo</msg>
+<status status="PASS" starttime="20201210 09:14:30.206" endtime="20201210 09:14:30.207"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>Ola Akaue, Bem vindo</arg>
+</arguments>
+<msg timestamp="20201210 09:14:30.208" level="FAIL">Ola Akau, Bem vindo != Ola Akaue, Bem vindo</msg>
+<status status="FAIL" starttime="20201210 09:14:30.207" endtime="20201210 09:14:30.208"></status>
+</kw>
+<status status="FAIL" starttime="20201210 09:14:30.206" endtime="20201210 09:14:30.208" critical="yes">Ola Akau, Bem vindo != Ola Akaue, Bem vindo</status>
+</test>
+<status status="FAIL" starttime="20201210 09:14:30.169" endtime="20201210 09:14:30.211"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
